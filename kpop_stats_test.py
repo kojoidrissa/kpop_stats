@@ -6,6 +6,14 @@ for video in data['feed']['entry'][0:5]:
     view_count = int(video['yt$statistics']['viewCount']) #converts viewCount into an int
     print(video['title']['$t'], "with", '{:,}'.format(view_count), "views") #second 1/2 formats the int with thousands separators
 
+'''This prints the dictionary for the first 'entry' in the 'feed' key
+I need to figure out of processing these dicts with Python's JSON
+module will make them easier to read, for a human (me).
+Running the variable through the print function compresses it;
+Just typing the variable name at the prompt produces something 
+easier to read
+'''
+google_test = data['feed']['entry'][0]
 
 # #This is the code I used to create the youTube_data.txt file
 # '''print()
